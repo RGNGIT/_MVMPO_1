@@ -25,7 +25,7 @@ namespace _MVMPO_1
             chartMain.Series.Add("Расчет");
             chartMain.Series["Расчет"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             chartMain.Series["Расчет"].BorderWidth = 5;
-            if (!int.TryParse(textBox1.Text, out int l))
+            if (!double.TryParse(textBox1.Text, out double l))
             {
                 MessageBox.Show("Невалидный X");
                 return;
@@ -35,7 +35,7 @@ namespace _MVMPO_1
                 MessageBox.Show("Невалидный epsilon");
                 return;
             }
-            var x = Convert.ToInt32(textBox1.Text);
+            var x = Convert.ToDouble(textBox1.Text);
             var epsilon = Convert.ToDouble(textBox2.Text);
             if (x <= -7 || x >= 7)
             {
